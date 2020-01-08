@@ -12,6 +12,7 @@ With desired images in the appropriate folders - "type-a" and, optionally, "type
 - number of images of type b: This is the number of type_b images that will be selected. Leave this blank if you have only one type of image
 
 ## File Structure
+```md
 image-shuffler
 |
 +-- image_shuffler.py
@@ -23,6 +24,7 @@ image-shuffler
 |  +-- type-b
 |
 +-- out
+```
 
 ## License
 MIT License
