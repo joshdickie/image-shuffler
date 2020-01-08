@@ -42,6 +42,23 @@ def main():
         matrices (of size determined by the user), and saves them to
         an "output" folder.
     """
+    global matrix_x, matrix_y
+    if inputs_valid():
+        if number_of_images_b.get() != "": #check if images_b empty
+            matrix_size = (int(number_of_images_a.get()) +
+                           int(number_of_images_b.get()))
+        else:
+            matrix_size = int(number_of_images_a.get())
+
+        size_prime, matrix_x, matrix_y = square_distribution(matrix_size)
+
+        if size_prime:
+            messagebox.showwarning("Grid can not be constructed", (
+                                   "Error: grid of requested size can not be"
+                                   "constructed (type a + type b is prime)"))
+        else:
+            generate_image_matrices()
+            messagebox.showinfo("","done.")
 
 
 def inputs_valid():
